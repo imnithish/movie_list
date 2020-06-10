@@ -1,5 +1,6 @@
-package com.imnstudios.movielist
+package com.imnstudios.movielist.data.network
 
+import com.imnstudios.movielist.data.models.Movie
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

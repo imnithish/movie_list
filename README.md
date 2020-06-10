@@ -84,4 +84,6 @@ annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
         })
 ```
-12. 
+12. create navigation resource file main_nav
+13. use NavHostFragment in activity_main layout
+14. use data binding

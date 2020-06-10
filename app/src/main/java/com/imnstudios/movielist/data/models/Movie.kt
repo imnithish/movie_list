@@ -1,4 +1,4 @@
-package com.imnstudios.movielist
+package com.imnstudios.movielist.data.models
 
 data class Movie(
     val id: Int,

@@ -1,4 +1,4 @@
-package com.imnstudios.movielist
+package com.imnstudios.movielist.data.repositories
 
 import retrofit2.Response
 import java.io.IOException
@@ -11,7 +11,9 @@ abstract class SafeApiRequest {
             return response.body()!!
         } else {
             //@TODO HANDLE API EXCEPTION
-            throw  ApiException(response.code().toString())
+            throw  ApiException(
+                response.code().toString()
+            )
         }
 
     }

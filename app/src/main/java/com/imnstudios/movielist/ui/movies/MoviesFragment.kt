@@ -1,4 +1,4 @@
-package com.imnstudios.movielist
+package com.imnstudios.movielist.ui.movies
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.imnstudios.movielist.R
+import com.imnstudios.movielist.data.network.MoviesApi
+import com.imnstudios.movielist.data.repositories.MoviesRepository
 import kotlinx.android.synthetic.main.movies_fragment.*
 
 class MoviesFragment : Fragment() {
@@ -25,15 +28,18 @@ class MoviesFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         val api = MoviesApi()
-        val repository = MoviesRepository(api)
-        factory = MoviesViewModelFactory(repository)
+        val repository =
+            MoviesRepository(api)
+        factory =
+            MoviesViewModelFactory(repository)
         viewModel = ViewModelProvider(this, factory).get(MoviesViewModel::class.java)
         viewModel.getMovies()
         viewModel.movies.observe(viewLifecycleOwner, Observer { movies ->
             recycler_view_movies.also {
                 it.layoutManager = LinearLayoutManager(requireContext())
                 it.setHasFixedSize(true)
-                it.adapter = MoviesAdapter(movies)
+                it.adapter =
+                    MoviesAdapter(movies)
             }
 
         })

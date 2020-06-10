@@ -1,8 +1,11 @@
-package com.imnstudios.movielist
+package com.imnstudios.movielist.ui.movies
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.imnstudios.movielist.util.Coroutines
+import com.imnstudios.movielist.data.models.Movie
+import com.imnstudios.movielist.data.repositories.MoviesRepository
 import kotlinx.coroutines.Job
 
 class MoviesViewModel(

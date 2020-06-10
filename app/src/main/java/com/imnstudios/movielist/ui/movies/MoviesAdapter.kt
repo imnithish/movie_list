@@ -1,9 +1,11 @@
-package com.imnstudios.movielist
+package com.imnstudios.movielist.ui.movies
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.imnstudios.movielist.R
+import com.imnstudios.movielist.data.models.Movie
 import com.imnstudios.movielist.databinding.RecyclerviewMovieBinding
 
 class MoviesAdapter(

@@ -1,4 +1,4 @@
-package com.imnstudios.movielist
+package com.imnstudios.movielist.util
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter

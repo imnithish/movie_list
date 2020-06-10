@@ -1,7 +1,8 @@
-package com.imnstudios.movielist
+package com.imnstudios.movielist.ui.movies
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.imnstudios.movielist.data.repositories.MoviesRepository
 
 @Suppress("UNCHECKED_CAST")
 class MoviesViewModelFactory(

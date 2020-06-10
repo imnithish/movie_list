@@ -1,10 +1,9 @@
-package com.imnstudios.movielist
+package com.imnstudios.movielist.util
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-import javax.security.auth.callback.Callback
 
 object Coroutines {
 
