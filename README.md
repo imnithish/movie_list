@@ -26,7 +26,7 @@ classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0"
 
 ###### Needed Dependencies
 
-```
+    ```
     //Retrofit and GSON
     implementation 'com.squareup.retrofit2:retrofit:2.6.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
