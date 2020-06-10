@@ -24,6 +24,11 @@ classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0"
 }
 ```
 
+4. in gradle properties
+```
+android.databinding.enabledV2=true
+```
+
 ###### Needed Dependencies
 
 ```
@@ -52,3 +57,18 @@ implementation "androidx.navigation:navigation-ui-ktx:2.3.0-rc01"
 implementation 'com.github.bumptech.glide:glide:4.11.0'
 annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 ```
+
+###### Install plug-in JSONToKotlin Class Converter
+
+###### Steps
+
+1. create MoviesApi interface
+2. create data class
+3. create SafeApiRequest
+4. create repository to call MoviesApi using SafeApiRequest
+5. create fragment with ViewModel
+6. setup ViewModel
+7. create MoviesViewModelFactory because there is a parameter in MoviesViewModel(so, you can't initialise viewModel in the onActivityCreated function of MoviesFragment)
+8. setup onActivityCreated of MoviesFragment
+9. create coroutines(so, we can fetch movies in io-thread and get callback to main-thread)
+10. 
