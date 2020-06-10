@@ -71,4 +71,17 @@ annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 7. create MoviesViewModelFactory because there is a parameter in MoviesViewModel(so, you can't initialise viewModel in the onActivityCreated function of MoviesFragment)
 8. setup onActivityCreated of MoviesFragment
 9. create coroutines(so, we can fetch movies in io-thread and get callback to main-thread)
-10. 
+10. create RecyclerView Adapter and do data binding
+11. getMovies from viewModel, observe viewModel also set adapter on onActivityCreated of MoviesFragment
+```
+        viewModel.getMovies()
+        viewModel.movies.observe(viewLifecycleOwner, Observer { movies ->
+            recycler_view_movies.also {
+                it.layoutManager = LinearLayoutManager(requireContext())
+                it.setHasFixedSize(true)
+                it.adapter = MoviesAdapter(movies)
+            }
+
+        })
+```
+12. 
