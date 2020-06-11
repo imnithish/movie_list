@@ -30,13 +30,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="195dp">
 
+
                     <ImageView
                         android:id="@+id/imageView"
                         android:layout_width="match_parent"
                         android:layout_height="195dp"
-                        android:background="@drawable/captain_marvel"
                         android:scaleType="matrix"
-                        app:image="@{movie.image}" />
+                        app:image="@{movie.image}"
+                        app:progressBar="@{progressBar}"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
 
                     <TextView
                         android:id="@+id/textViewIsNew"
